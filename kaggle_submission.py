@@ -137,6 +137,7 @@ def generate_kaggle_results(data_path, model_path, ct_weight, output_file):
         cur_week = int(filtered.cur_week.unique()[0])
         cur_fvc = filtered.cur_fvc.unique()[0]
         patient_weeks = [patient + "_" + str(w) for w in all_weeks]
+        print(filtered)
         
         # predict fvc
         intercept = cur_fvc - slope * cur_week
